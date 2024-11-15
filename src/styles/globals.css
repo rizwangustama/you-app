@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background-color-main: #09141A;
+  --background-body: #f7f7f7;
+  --background-body-black: #000000;
+  --font-color-input: rgba(255, 255, 255, 0.4);
+  --background-color-input: rgba(255, 255, 255, 0.1);
+  --button-background: linear-gradient(to right, #40E0D0, #4B9FE1);
+
+  --background-color-input-main: rgba(217, 217, 217, 0.1);
+}
+
+body {
+ background-color: var(--background-body-black);
+}
+
+.background-primary {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, #0e1f2f, #123645);
+  /*border-radius: 20px;*/
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.2), 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.background-secondary {
+  background: var(--background-color-main);
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.max-screen-sm {
+  max-width: 480px!important;
+  margin: 0 auto!important;
+  @apply px-6;
+}
+
+.max-screen-sm-main {
+  max-width: 480px!important;
+  margin: 0 auto!important;
+  @apply px-2;
+}
+
+/* Form Group */
+.form-group {
+  @apply flex flex-col gap-y-2.5 w-full;
+
+  & .label {
+    color: red;
+    @apply text-[13px]
+  }
+  & input {
+    color: var(--font-color-input);
+    background-color: var(--background-color-input);
+    @apply px-[18px] py-[17px] rounded-[9px] outline-none;
+
+  }
+  & input::placeholder {
+    color: var(--font-color-input);
+  }
+}
+
+.label-panel {
+  @apply text-[24px] text-white mb-[25px] font-bold;
+}
+
+#form-button {
+  background: var(--button-background);
+  box-shadow: 0 4px 15px rgba(75, 159, 225, 0.3);
+  @apply rounded-lg py-4 text-white font-bold text-[16px];
+}
+
+.form-main-input-group {
+  @apply flex flex-row items-center;
+  & .form-main-label {
+    @apply text-[13px] flex-1 text-nowrap text-white;
+  }
+
+  & input {
+    background: var(--background-color-input-main);
+    @apply text-[13px] flex-[1.5] py-[10px] px-5 rounded-lg outline-none w-full text-white;
+  }
+}
+
+
